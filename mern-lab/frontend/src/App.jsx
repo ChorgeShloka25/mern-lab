@@ -7,7 +7,7 @@ function App() {
     const [error, setError] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/products")
+        fetch(`${import.meta.env.VITE_API_URL}/api/products`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Failed to fetch products");
